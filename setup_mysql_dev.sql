@@ -1,0 +1,11 @@
+--A database named hbnb_dev_db is created
+--A new user hbnb_dev (in localhost)
+--The password of hbnb_dev is set to hbnb_dev_pwd
+--hbnb_dev has all privileges
+
+CREATE DATABASE IF NOT EXISTS hbnb_dev_db;
+DROP USER IF EXISTS 'hbnb_dev'@'localhost';
+CREATE USER 'hbnb_dev'@'localhost' IDENTIFIED BY 'hbnb_dev_pwd';
+GRANT ALL PRIVILEGES ON `hbnb_dev_db`.* TO 'hbnb_dev'@'localhost';
+GRANT SELECT ON `performance_schema`.* TO 'hbnb_dev'@'localhost';
+FLUSH PRIVILEGES;
